@@ -1,4 +1,4 @@
-﻿namespace LostV2
+﻿namespace ChooseGameSummative
 {
     partial class Form1
     {

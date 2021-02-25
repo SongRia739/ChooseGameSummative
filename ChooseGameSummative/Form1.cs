@@ -13,8 +13,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.Threading;
+using System.Media; 
 
-namespace LostV2
+namespace ChooseGameSummative
 {
     public partial class Form1 : Form
     {
@@ -22,6 +23,7 @@ namespace LostV2
         int scene = 0;
 
         // random number generator
+        Random randGen = new Random();
 
         public Form1()
         {
@@ -53,7 +55,6 @@ namespace LostV2
             {
                 if (scene == 6)
                 {
-                    Random randGen = new Random();
                     int value = randGen.Next(1, 11);
 
                     if (value <= 3) { scene = 10; }
@@ -70,7 +71,6 @@ namespace LostV2
                 else if (scene == 23) { scene = 99; }
                 else if (scene == 1) { scene = 0; }
                 else if (scene == 3) { scene = 6; }
- //               else if (scene == ) { scene = ; }
                 else if (scene == 15) { scene = 19; }
 
             }
@@ -131,6 +131,8 @@ namespace LostV2
                     starLabel.Text = "";
                     break;
                 case 9:
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.resturantChatterrr);
+                    player.Play();
                     textLabel.Text = "He agrees and the two of you have a good time and you learn much more about eachother than you did before. The check finally comes, what do you do?";
                     heartLabel.Text = "Wait for Chris to pay for you";
                     starLabel.Text = "Immediately bring out your walet";
@@ -217,7 +219,6 @@ namespace LostV2
                     break;
             }
         }
-
     }
 
 }
