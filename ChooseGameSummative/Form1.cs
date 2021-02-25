@@ -26,6 +26,7 @@ namespace LostV2
         public Form1()
         {
             //display initial message and options
+            InitializeComponent();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -50,27 +51,28 @@ namespace LostV2
             }
             else if (e.KeyCode == Keys.N) //star button press
             {
-                if (scene == 0) { scene = 2; }
+                if (scene == 6)
+                {
+                    Random randGen = new Random();
+                    int value = randGen.Next(1, 11);
+
+                    if (value <= 3) { scene = 10; }
+                    else { scene = 11; }
+                }
+                else if (scene == 11) { scene = 99; }
+                else  if (scene == 0) { scene = 2; }
                 else if (scene == 2) { scene = 0; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
-                else if (scene == ) { scene = ; }
+                else if (scene == 4) { scene = 8; }
+                else if (scene == 8) { scene = 99; }
+                else if (scene == 7) { scene = 12; }
+                else if (scene == 12) { scene = 16; }
+                else if (scene == 16) { scene = 23; }
+                else if (scene == 23) { scene = 99; }
+                else if (scene == 1) { scene = 0; }
+                else if (scene == 3) { scene = 6; }
+ //               else if (scene == ) { scene = ; }
+                else if (scene == 15) { scene = 19; }
+
             }
             else if (e.KeyCode == Keys.Space) //diamond button press
             {

@@ -16,7 +16,7 @@ namespace ChooseGameSummative
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new background());
+       //     Application.Run(new background());
         }
     }
 }
